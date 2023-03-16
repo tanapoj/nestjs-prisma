@@ -1,0 +1,12 @@
+node_modules
+# dist
+postgres-data
+mssql-data
+.dockerignore
+.git
+.gitignore
+docker
+Dockerfile*
+README.md
+LICENSE
+.vscode

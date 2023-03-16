@@ -1,0 +1,57 @@
+version: '3.9'
+
+services:
+  api:
+    platform: linux/arm64/v8
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.api
+    container_name: bellugg-api
+    env_file:
+      - .env
+      - .env.development
+    ports:
+      - ${API_PORT}:${API_PORT}
+    volumes:
+      - ./src:/app/src
+      - ./prisma/migrations:/app/prisma/migrations
+      - ./prisma/schemas:/app/prisma/schemas
+    depends_on:
+      - db
+  db:
+    platform: linux/arm64/v8
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.db
+    container_name: bellugg-db
+    environment:
+      POSTGRES_USER: api
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: api
+      PGDATA: /pg-data
+    volumes:
+      - ./pg-data:/pg-data:rw
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+  mssql:
+    # image: mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.mssql
+    container_name: bellugg-mssql
+    ports:
+      - 1433:1433
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: P@ssw0rd
+    volumes:
+      - ./mssql-data:/var/opt/mssql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  pg-data:
+  mssql:
+  prisma:

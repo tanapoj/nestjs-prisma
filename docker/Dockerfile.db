@@ -1,0 +1,19 @@
+FROM postgres:15.0-alpine
+# COPY sql/*.sql /docker-entrypoint-initdb.d
+
+# RUN mkdir app
+# RUN chmod -R 777 /app
+
+# RUN addgroup --g 1000 groupcontainer
+# RUN adduser -u 1000 -G groupcontainer -h /home/containeruser -D containeruser
+
+# USER containeruser
+
+# COPY . .
+# RUN cd home
+# RUN mkdir pg-data
+# RUN chown -R containeruser pg-data
+# RUN chmod -R 777 pg-data
+# ENTRYPOINT [ "sh", "-c", "./start.sh" ]
+
+EXPOSE 5432
