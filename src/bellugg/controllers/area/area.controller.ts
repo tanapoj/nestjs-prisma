@@ -1,6 +1,6 @@
 import { Controller, Post, Body, Inject, Response, HttpStatus } from '@nestjs/common'
 import { AreaDto } from '../../models'
-import { AreaService } from 'src/bellugg/services'
+import { AreaService } from 'src/nestpris/services'
 import { responseSuccess, responseFail } from '../../../common/helper'
 import { Response as Res } from 'express'
 

@@ -1,7 +1,7 @@
 import { HttpStatus } from '@nestjs/common'
 import { Response as Res } from 'express'
-import { Status, ResponseFormatToFail, ResponseFormatToError, Option } from '../../bellugg'
-import { DefaultStatus } from '../../bellugg/interfaces'
+import { Status, ResponseFormatToFail, ResponseFormatToError, Option } from '../../nestpris'
+import { DefaultStatus } from '../../nestpris/interfaces'
 export interface Options {
     status: HttpStatus
     message?: string

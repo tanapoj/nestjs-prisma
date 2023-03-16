@@ -1,5 +1,5 @@
 import { Inject } from '@nestjs/common'
-import { Repository } from 'src/bellugg/repositories'
+import { Repository } from 'src/nestpris/repositories'
 import { PrismaClient, Prisma } from '@prisma/client'
 import { TransactionManager } from '../../repositories'
 

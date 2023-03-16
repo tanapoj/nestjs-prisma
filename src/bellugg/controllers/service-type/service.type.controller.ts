@@ -3,7 +3,7 @@ import { AgentGuard } from '../../../guards/auth.guard'
 import { ServiceTypeService } from '../../services'
 import { Request as Req, Response as Res } from 'express'
 import { handleResponse } from '../../../common/helper'
-import { DefaultStatus } from 'src/bellugg/interfaces'
+import { DefaultStatus } from 'src/nestpris/interfaces'
 @Controller()
 export class ServiceTypeController {
     constructor(@Inject('ServiceTypeService') private serviceTypeService: ServiceTypeService) {}

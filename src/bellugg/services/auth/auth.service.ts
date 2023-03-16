@@ -1,7 +1,7 @@
 import { Injectable, Inject } from '@nestjs/common'
 import { AuthAgent } from '@prisma/client'
 import { BaseService } from '../base'
-import { Repository } from 'src/bellugg/repositories'
+import { Repository } from 'src/nestpris/repositories'
 
 @Injectable()
 export class AuthService extends BaseService<AuthAgent> {

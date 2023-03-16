@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile.api
-    container_name: bellugg-api
+    container_name: nestpris-api
     env_file:
       - .env
       - .env.development
@@ -23,7 +23,7 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile.db
-    container_name: bellugg-db
+    container_name: nestpris-db
     environment:
       POSTGRES_USER: api
       POSTGRES_PASSWORD: 123456
@@ -38,7 +38,7 @@ services:
     build:
       context: .
       dockerfile: docker/Dockerfile.mssql
-    container_name: bellugg-mssql
+    container_name: nestpris-mssql
     ports:
       - 1433:1433
     environment:

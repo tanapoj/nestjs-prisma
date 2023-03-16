@@ -161,4 +161,4 @@ const TimeSlotServiceProvider: Provider = {
         AreaServiceProvider,
     ],
 })
-export class BelluggModule {}
+export class NestPrisModule {}

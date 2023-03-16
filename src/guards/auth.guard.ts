@@ -1,7 +1,7 @@
 import { CanActivate, ExecutionContext, HttpStatus, Inject, Injectable } from '@nestjs/common'
 import * as bcrypt from 'bcrypt'
 import { IncomingMessage } from 'http'
-import { AuthService } from '../bellugg'
+import { AuthService } from '../nestpris'
 import { responseError } from '../common'
 import { Response as Res } from 'express'
 

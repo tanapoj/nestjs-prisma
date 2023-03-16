@@ -19,7 +19,7 @@ import { Log } from '../../../logs'
 import { BookingsService } from '../../services'
 import { responseSuccess, responseFail, handleResponse } from '../../../common/helper'
 import { Response as Res, Request as Req } from 'express'
-import { Booking } from 'src/bellugg/entities'
+import { Booking } from 'src/nestpris/entities'
 import { BaseQueryPaginateFormat, DefaultStatus } from '../../interfaces'
 
 @Controller()

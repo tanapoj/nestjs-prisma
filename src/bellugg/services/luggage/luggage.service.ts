@@ -71,7 +71,7 @@ export class LuggageService {
             return {
                 id: size.size_id,
                 name: size.name,
-                thumbnail: `https://system.bellugg.com/image/BookingLugIcon/size_type_${size.size_type_id}.png`,
+                thumbnail: `https://system.nestpris.com/image/BookingLugIcon/size_type_${size.size_type_id}.png`,
                 description: null,
                 price: size.price,
                 currency: 'THB',

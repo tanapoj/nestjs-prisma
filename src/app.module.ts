@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
-import { BelluggModule, DbClient } from './bellugg'
+import { NestPrisModule, DbClient } from './nestpris'
 import { ConfigModule } from './config'
 import { APP_INTERCEPTOR } from '@nestjs/core'
 import { CustomInterceptor } from './interceptors/custom.interceptor'
@@ -17,7 +17,7 @@ import {
     ImageOrder,
     Agent,
     Size,
-} from './bellugg/entities'
+} from './nestpris/entities'
 
 @Module({
     imports: [
@@ -25,7 +25,7 @@ import {
             ...configService.dbConfig,
             entities: [Order, BranchCondition, Branch, BranchType, Coordinates, Luggage, ImageOrder, Agent, Size],
         }),
-        BelluggModule,
+        NestPrisModule,
         ConfigModule,
     ],
     controllers: [AppController],
